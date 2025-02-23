@@ -1,38 +1,35 @@
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI; // Importante para usar NavMeshAgent
 
-public class NpcAnimControl : MonoBehaviour
+public class AnimationStateController : MonoBehaviour
 {
-    private Animator animController;
-    private Rigidbody rb;
+    public Animator animator;
+    private NavMeshAgent agent;
+    private int speedHash;
+    private float speed;
 
     void Start()
     {
-        animController = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>(); // Obtém o NavMeshAgent
+        speedHash = Animator.StringToHash("speed");
     }
 
     void Update()
     {
-        if (rb == null || animController == null) return;
+        // Obtém a velocidade atual do NavMeshAgent no plano XZ
+        speed = new Vector3(agent.velocity.x, 0, agent.velocity.z).magnitude;
 
-        Debug.Log("Velocidade do Rigidbody: " + rb.linearVelocity);
-
-        float velocidade = rb.linearVelocity.magnitude;
-
-        // Só atualiza se a velocidade for realmente perceptível
-        if (velocidade > 0.01f)
+        // Se a velocidade for muito baixa, força para zero
+        if (speed < 0.01f)
         {
-            animController.speed = velocidade;
+            speed = 0f;
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            rb.linearVelocity = transform.forward;
-        }
+        // Debug para verificar os valores da velocidade no Console
+        Debug.Log("Speed: " + speed);
+
+        animator.SetFloat(speedHash, speed);
     }
-
-    
-
-
 }
