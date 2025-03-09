@@ -28,9 +28,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public DialogueData RetunrnSelectedDialogue()
+
+    {
+        DialogueData dialogueSelected= null;
+       DialogueData[] allDialogues = GetComponent<AvableDialogues>().DialogueData;
+        //foreach(DialogueData dialogue in allDialogues)
+        //{
+        //dialogueSelected = allDialogues[Random.Range(0,allDialogues.Length)];
+        //}
+        dialogueSelected = allDialogues[Random.Range(0, allDialogues.Length)];
+        return dialogueSelected;
+    }
+
     public void TakeDialogue()
     {
-        fullText = GetComponent<AvableDialogues>().DialogueData.question;
+        DialogueData selectedDialogue = RetunrnSelectedDialogue();
+        //fullText = GetComponent<AvableDialogues>().DialogueData[1].question;
+        fullText = selectedDialogue.question;
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
