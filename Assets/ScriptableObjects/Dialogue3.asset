@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Dialogue3
   m_EditorClassIdentifier: 
   question: I wanna be promoted
+  maxRespect: 100
+  minRespect: 0
+  maxProdutivity: 100
+  minProdutivity: 0
+  maxHappiness: 100
+  minHappiness: 0
+  avable: 0

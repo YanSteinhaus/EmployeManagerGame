@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: Employee1
   m_EditorClassIdentifier: 
   employeeName: Adam
+  employeeID: 0
+  respect: 40
+  produtivity: 40
+  happiness: 40

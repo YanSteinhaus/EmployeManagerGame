@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -15,8 +16,9 @@ public class DialogueManager : MonoBehaviour
     private void OnTriggerEnter(Collider employee)
     {
         Name.text = employee.GetComponent<NpcInfo>().Employee.employeeName;
+        NpcInfo npcInfo = employee.gameObject.GetComponent<NpcInfo>();
         DialogueCanva.SetActive(true);
-        TakeDialogue();
+        TakeDialogue(npcInfo);
     }
 
     private void OnTriggerExit(Collider other)
@@ -28,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public DialogueData RetunrnSelectedDialogue()
+    public DialogueData RetunrnSelectedRandomDialogue()
 
     {
         DialogueData dialogueSelected= null;
@@ -41,9 +43,27 @@ public class DialogueManager : MonoBehaviour
         return dialogueSelected;
     }
 
-    public void TakeDialogue()
+    public DialogueData RetunrnSelectedDialogue(NpcInfo employee)
+
     {
-        DialogueData selectedDialogue = RetunrnSelectedDialogue();
+        DialogueData dialogueSelected = null;
+        DialogueData[] allDialogues = GetComponent<AvableDialogues>().DialogueData;
+        foreach(DialogueData dialogue in allDialogues)
+        {
+        dialogueSelected = allDialogues[Random.Range(0,allDialogues.Length)];
+
+            if (ValidarDialogo(dialogueSelected, employee))
+            {
+                return dialogueSelected;
+            }
+        }
+        return null;
+       
+    }
+
+    public void TakeDialogue(NpcInfo employee)
+    {
+        DialogueData selectedDialogue = RetunrnSelectedDialogue(employee);
         //fullText = GetComponent<AvableDialogues>().DialogueData[1].question;
         fullText = selectedDialogue.question;
         if (typingCoroutine != null)
@@ -61,5 +81,12 @@ public class DialogueManager : MonoBehaviour
             Dialogue.text += letter;
             yield return new WaitForSeconds(typingSpeed); // Atraso entre letras
         }
+    }
+
+    private bool ValidarDialogo(DialogueData dialogue, NpcInfo npcInfo)
+    {
+        return npcInfo.Employee.happiness >= dialogue.minHappiness && npcInfo.Employee.happiness <= dialogue.maxHappiness &&
+               npcInfo.Employee.produtivity >= dialogue.minProdutivity && npcInfo.Employee.produtivity <= dialogue.maxProdutivity &&
+               npcInfo.Employee.respect >= dialogue.minRespect && npcInfo.Employee.respect <= dialogue.maxRespect;
     }
 }

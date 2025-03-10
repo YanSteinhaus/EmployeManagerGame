@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Dialogue1
   m_EditorClassIdentifier: 
   question: How is the wheather today?
+  maxRespect: 100
+  minRespect: 50
+  maxProdutivity: 100
+  minProdutivity: 50
+  maxHappiness: 100
+  minHappiness: 50
+  avable: 0

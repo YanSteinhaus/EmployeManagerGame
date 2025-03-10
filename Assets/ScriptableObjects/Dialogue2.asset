@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Dialogue2
   m_EditorClassIdentifier: 
   question: How is your mother that whale?
+  maxRespect: 50
+  minRespect: 0
+  maxProdutivity: 50
+  minProdutivity: 0
+  maxHappiness: 50
+  minHappiness: 0
+  avable: 0
