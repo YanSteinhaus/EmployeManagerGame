@@ -16,5 +16,9 @@ public class DialogueData : ScriptableObject
 
     public bool avable;
 
+    public NpcInfo[] npcAfected;
+
+    public AnswareData[] answares;
+
 
 }
