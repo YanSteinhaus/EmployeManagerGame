@@ -5,6 +5,8 @@ public class AnswareData : ScriptableObject
 {
     public string answare;
 
+    
+
     public int respectConsequence;
     public OperationType respectOperation;
 
@@ -14,6 +16,8 @@ public class AnswareData : ScriptableObject
     public int happinessConsequence;
     public OperationType happinessOperation;
 
+    public NpcInfo[] npcAfected;
+    public DialogueData nextDialogue;
     public enum OperationType
     {
         Plus,
