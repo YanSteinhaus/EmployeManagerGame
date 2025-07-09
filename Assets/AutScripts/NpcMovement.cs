@@ -1,45 +1,58 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class NpcMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Transform HRtable;
-    [SerializeField]
-    private Transform StandByPosition;
+    [SerializeField] private Transform HRtable;
+    [SerializeField] private Transform StandByPosition;
 
-    Vector3 tablePos ;
-    Vector3 standByPos ;
+    private NavMeshAgent agent;
+    private float arrivalThreshold = 0.2f;
+    private bool isLeaving = false;
 
-    public NavMeshAgent agent;
-
-    void Start()
+    private void Awake()
     {
-         tablePos = HRtable.transform.position;
-         standByPos = StandByPosition.transform.position;
+        agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Detecta chegada no standby e dispara próximo NPC após delay
+        if (isLeaving && Vector3.Distance(transform.position, StandByPosition.position) < arrivalThreshold)
         {
-            ComeToRoom();
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            LeaveRoom();
+            isLeaving = false;
+            StartCoroutine(CallNextNpcWithDelay());
         }
     }
 
     public void ComeToRoom()
     {
-        agent.SetDestination(tablePos);
+        if (agent != null && HRtable != null)
+        {
+            agent.SetDestination(HRtable.position);
+            isLeaving = false;
+        }
     }
 
     public void LeaveRoom()
     {
-        agent.SetDestination(standByPos);
+        if (agent != null && StandByPosition != null)
+        {
+            agent.SetDestination(StandByPosition.position);
+            isLeaving = true;
+        }
+    }
+
+    private IEnumerator CallNextNpcWithDelay()
+    {
+        float delay = Random.Range(2f, 5f);
+        yield return new WaitForSeconds(delay);
+
+        NpcManager npcManager = FindObjectOfType<NpcManager>();
+        if (npcManager != null)
+        {
+            npcManager.SelectRamdomEmployee();
+        }
     }
 }

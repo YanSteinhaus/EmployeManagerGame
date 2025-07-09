@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
-  m_Name: Dialogue3
+  m_Script: {fileID: 11500000, guid: eec88e43634a951419d98e8dca5107a9, type: 3}
+  m_Name: Answer3. 1
   m_EditorClassIdentifier: 
-  question: I wanna be promoted
-  maxRespect: 100
-  minRespect: 0
-  maxProdutivity: 100
-  minProdutivity: 0
-  maxHappiness: 100
-  minHappiness: 0
-  avable: 0
+  answerText: Converse com ela de forma clara e respeitosa.
+  neuroticismPoints: 0
+  agreeablenessPoints: 2
+  extraversionPoints: 1
+  conscientiousnessPoints: 0
+  opennessPoints: 0

@@ -28,7 +28,7 @@ public class AnimationStateController : MonoBehaviour
         }
 
         // Debug para verificar os valores da velocidade no Console
-        Debug.Log("Speed: " + speed);
+        //Debug.Log("Speed: " + speed);
 
         animator.SetFloat(speedHash, speed);
     }

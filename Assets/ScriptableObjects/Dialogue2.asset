@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
   m_Name: Dialogue2
   m_EditorClassIdentifier: 
-  question: How is your mother that whale?
-  maxRespect: 50
-  minRespect: 0
-  maxProdutivity: 50
-  minProdutivity: 0
-  maxHappiness: 50
-  minHappiness: 0
-  avable: 0
+  question: "Tive uma ideia para agilizar nosso atendimento. N\xE3o \xE9 padr\xE3o,
+    mas pode funcionar. Devo aplicar ou esperar autoriza\xE7\xE3o"
+  avable: 1
+  answers:
+  - {fileID: 11400000, guid: a492cfc314a810d40b580fb730c0040e, type: 2}
+  - {fileID: 11400000, guid: 736fe79657dea5e469f9618cedbc821d, type: 2}
+  - {fileID: 11400000, guid: b6e17c6196acc4c4a807fa6075131454, type: 2}
+  - {fileID: 11400000, guid: 6f21ada892213a84899e04f265e3fe83, type: 2}

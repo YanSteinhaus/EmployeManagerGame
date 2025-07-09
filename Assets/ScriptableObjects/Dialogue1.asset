@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
   m_Name: Dialogue1
   m_EditorClassIdentifier: 
-  question: How is the wheather today?
-  maxRespect: 100
-  minRespect: 50
-  maxProdutivity: 100
-  minProdutivity: 50
-  maxHappiness: 100
-  minHappiness: 50
-  avable: 0
+  question: "Gerente, amanh\xE3 tenho que apresentar meu relat\xF3rio no comit\xEA.
+    Eu travo s\xF3 de pensar. Alguma dica?"
+  avable: 1
+  answers:
+  - {fileID: 11400000, guid: 89a2e08fe3a715b4b9185aca2a653829, type: 2}
+  - {fileID: 11400000, guid: e2e144a97eb397d4e8d03e1fabd41f1a, type: 2}
+  - {fileID: 11400000, guid: e65c4a2ec6ad52c4fa01954e88cb96bc, type: 2}
+  - {fileID: 11400000, guid: d8232009377c75d45b18975370fd908e, type: 2}

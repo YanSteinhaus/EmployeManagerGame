@@ -8,10 +8,10 @@ public class NpcManager : MonoBehaviour
     {
         SelectRamdomEmployee();
     }
+
     void Update()
     {
-
-        //For Testing
+        // For Testing
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             SelectEmployeeByID(0);
@@ -37,31 +37,28 @@ public class NpcManager : MonoBehaviour
                 continue;
             }
 
-            NpcInfo npcInfo = employee.GetComponent<NpcInfo>(); // Obtém o script NpcInfo
+            NpcInfo npcInfo = employee.GetComponent<NpcInfo>();
             if (npcInfo == null || npcInfo.Employee == null)
             {
                 Debug.LogWarning($"O objeto {employee.name} não tem um EmployeeData atribuído!");
                 continue;
             }
 
-            Debug.Log($"Verificando {npcInfo.Employee.employeeName}");
-
-            if (npcInfo.Employee.employeeName == name) // Compara o nome correto do ScriptableObject
+            if (npcInfo.Employee.employeeName == name)
             {
-                employee.SetActive(true); // Ativa apenas o NPC correto
-                Debug.Log($"{npcInfo.Employee.employeeName} foi ativado!");
+                employee.SetActive(true);
+                employee.GetComponent<NpcMovement>()?.ComeToRoom();
+                Debug.Log($"{npcInfo.Employee.employeeName} foi ativado e vai para a mesa!");
             }
             else
             {
-                employee.SetActive(false); // Desativa os outros
-                Debug.Log($"{npcInfo.Employee.employeeName} foi desativado!");
+                employee.SetActive(false);
             }
         }
     }
 
     public void SelectEmployeeByID(int ID)
     {
-
         foreach (var employee in employees)
         {
             if (employee == null)
@@ -71,34 +68,38 @@ public class NpcManager : MonoBehaviour
             }
             NpcInfo npcInfo = employee.GetComponent<NpcInfo>();
 
-            if(npcInfo == null || npcInfo.Employee == null)
+            if (npcInfo == null || npcInfo.Employee == null)
             {
-                Debug.LogWarning($"O objeto {employee.name} não tem EmployeeData atrinuido!");
+                Debug.LogWarning($"O objeto {employee.name} não tem EmployeeData atribuído!");
                 continue;
             }
             if (npcInfo.Employee.employeeID == ID)
             {
                 employee.SetActive(true);
+                employee.GetComponent<NpcMovement>()?.ComeToRoom();
                 Debug.Log($"{npcInfo.Employee.employeeName} is active at ID:{ID}");
             }
             else
             {
                 employee.SetActive(false);
-                Debug.Log($"{npcInfo.Employee.employeeName} is unactivaded at ID:{ID}");
             }
-
-
-
         }
-
     }
 
     public void SelectRamdomEmployee()
     {
-       int ramndomID = Random.Range(0,employees.Length);
+        int randomID = Random.Range(0, employees.Length);
+        SelectEmployeeByID(randomID);
+        Debug.Log($"Rand id:{randomID}");
+    }
 
-        SelectEmployeeByID(ramndomID);
-        Debug.Log($"Rand id:{ramndomID}");
-
+    public GameObject GetActiveNpc()
+    {
+        foreach (var employee in employees)
+        {
+            if (employee != null && employee.activeInHierarchy)
+                return employee;
+        }
+        return null;
     }
 }

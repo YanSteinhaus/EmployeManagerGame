@@ -1,3 +1,4 @@
+using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewDialogue", menuName = "HRGame/Dialogue")]
@@ -5,16 +6,19 @@ public class DialogueData : ScriptableObject
 {
     public string question;
 
-    public int maxRespect;
-    public int minRespect;
+    // public int maxRespect;
+    // public int minRespect;
 
-    public int maxProdutivity;
-    public int minProdutivity;
+    // public int maxProdutivity;
+    // public int minProdutivity;
 
-    public int maxHappiness;
-    public int minHappiness;
+    // public int maxHappiness;
+    // public int minHappiness;
 
-    public bool avable;
+    //public bool avable;
+
+    public AnswerData[] answers = new AnswerData[4];
+
 
 
 }
