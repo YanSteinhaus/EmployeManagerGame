@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
+  m_Name: Dialogue 8
+  m_EditorClassIdentifier: 
+  question: "Sinto que n\xE3o tenho espa\xE7o pra tomar decis\xF5es. Tudo precisa
+    de aprova\xE7\xE3o."
+  answers:
+  - {fileID: 11400000, guid: 6dc656cde1f70444090c13d2df3e438b, type: 2}
+  - {fileID: 11400000, guid: 6fc3de2b528e6b742bc2a934857e99ca, type: 2}
+  - {fileID: 11400000, guid: 9278e26c19615cf49984a0af8ae160b1, type: 2}
+  - {fileID: 11400000, guid: 04bcb9aa3fdb5464b9a43629f2385a92, type: 2}

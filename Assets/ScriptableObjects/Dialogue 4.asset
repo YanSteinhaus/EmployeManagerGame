@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
   m_Name: Dialogue 4
   m_EditorClassIdentifier: 
-  question: "A J\xFAlia vive se metendo no meu trabalho. Isso t\xE1 me deixando irritada.
-    O que fa\xE7o?"
-  avable: 1
+  question: "Estou tentando melhorar, mas n\xE3o bati a meta de novo. Sei que preciso
+    de mais tempo..."
   answers:
-  - {fileID: 11400000, guid: f12ec7adfed41b940a2f11ac3a7ee61a, type: 2}
-  - {fileID: 11400000, guid: 1c50f53285996f54d8bbd84add5a8209, type: 2}
-  - {fileID: 11400000, guid: e62bb0acf4dd0494fbae9a500380374d, type: 2}
-  - {fileID: 11400000, guid: 37611c29d07d5084c854e7718efb977f, type: 2}
+  - {fileID: 11400000, guid: 84e952c689385ed4b90b0410673b5f47, type: 2}
+  - {fileID: 11400000, guid: 26868ea15cc276b4782c578f9ec5025c, type: 2}
+  - {fileID: 11400000, guid: f44d53e8e526ea64f95f1e0d158dd0ca, type: 2}
+  - {fileID: 11400000, guid: 69356dff737383c4490942061612fcde, type: 2}

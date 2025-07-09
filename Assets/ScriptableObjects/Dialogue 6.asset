@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
+  m_Name: Dialogue 6
+  m_EditorClassIdentifier: 
+  question: "O setor de compras n\xE3o entrega o que pedimos. J\xE1 perdi a paci\xEAncia.
+    Posso cobrar direto o gerente deles?"
+  answers:
+  - {fileID: 11400000, guid: 5ae11bb89c86d494f824dbf4937b3ac6, type: 2}
+  - {fileID: 11400000, guid: babd92e2daf391a41bf5575d3e2895ec, type: 2}
+  - {fileID: 11400000, guid: 9213bb3fbbc88d24397f25892e207bea, type: 2}
+  - {fileID: 11400000, guid: 070b64c61f3f0ab43b9260a652dfc314, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
+  m_Name: Dialogue 9
+  m_EditorClassIdentifier: 
+  question: "Cumpro tudo, mas n\xE3o gosto de socializar com a equipe. Isso vai me
+    prejudicar?"
+  answers:
+  - {fileID: 11400000, guid: a39cd6b72bfa3184da4e6a328aa68cfa, type: 2}
+  - {fileID: 11400000, guid: cf5deda2b052c094cbd778155a81104a, type: 2}
+  - {fileID: 11400000, guid: 2cef65a70c58a474788e8d20a904d019, type: 2}
+  - {fileID: 11400000, guid: 0929fe3251910dd4999a77edf83eb405, type: 2}

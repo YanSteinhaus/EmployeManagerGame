@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
-  m_Name: Dialogue2
+  m_Name: Dialogue 2
   m_EditorClassIdentifier: 
   question: "Tive uma ideia para agilizar nosso atendimento. N\xE3o \xE9 padr\xE3o,
     mas pode funcionar. Devo aplicar ou esperar autoriza\xE7\xE3o"
