@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
   m_Name: Dialogue 5
   m_EditorClassIdentifier: 
-  question: "Fui chamada de inconveniente na reuni\xE3o... mas s\xF3 queria ajudar.
+  question: "Fui chamado de inconveniente na reuni\xE3o... mas s\xF3 queria ajudar.
     Devo mudar algo?"
   answers:
   - {fileID: 11400000, guid: 8574b349d218a1d44837138f887c20b5, type: 2}

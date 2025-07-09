@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec88e43634a951419d98e8dca5107a9, type: 3}
   m_Name: Answer3. 3
   m_EditorClassIdentifier: 
-  answerText: Evite contato com ela e foque no seu trabalho.
+  answerText: Evite contato com ele e foque no seu trabalho.
   neuroticismPoints: 1
   agreeablenessPoints: -1
   extraversionPoints: 0

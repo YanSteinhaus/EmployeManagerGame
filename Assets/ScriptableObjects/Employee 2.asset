@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775c14e2ac79334478e80801895b2801, type: 3}
+  m_Name: Employee 2
+  m_EditorClassIdentifier: 
+  employeeName: Vittor Hugo
+  employeeID: 1
+  respect: 60
+  produtivity: 60
+  happiness: 60

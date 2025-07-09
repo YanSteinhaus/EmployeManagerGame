@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec88e43634a951419d98e8dca5107a9, type: 3}
   m_Name: Answer3. 1
   m_EditorClassIdentifier: 
-  answerText: Converse com ela de forma clara e respeitosa.
+  answerText: Converse com ele de forma clara e respeitosa.
   neuroticismPoints: 0
   agreeablenessPoints: 2
   extraversionPoints: 1

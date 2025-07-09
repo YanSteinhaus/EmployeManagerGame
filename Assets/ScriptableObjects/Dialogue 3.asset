@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcc1eeb456377342b8465c1c55fbd55, type: 3}
   m_Name: Dialogue 3
   m_EditorClassIdentifier: 
-  question: "A J\xFAlia vive se metendo no meu trabalho. Isso t\xE1 me deixando irritada.
+  question: "O Yan vive se metendo no meu trabalho. Isso t\xE1 me deixando irritado.
     O que fa\xE7o?"
-  avable: 1
   answers:
   - {fileID: 11400000, guid: f12ec7adfed41b940a2f11ac3a7ee61a, type: 2}
   - {fileID: 11400000, guid: 1c50f53285996f54d8bbd84add5a8209, type: 2}

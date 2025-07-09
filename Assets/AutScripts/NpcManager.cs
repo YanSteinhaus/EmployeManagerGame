@@ -12,19 +12,19 @@ public class NpcManager : MonoBehaviour
     void Update()
     {
         // For Testing
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            SelectEmployeeByID(0);
-        }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            SelectEmployeeByID(1);
-        }
+        //if (Input.GetKeyUp(KeyCode.Alpha1))
+        //{
+        //    SelectEmployeeByID(0);
+        //}
+        //if (Input.GetKeyUp(KeyCode.Alpha2))
+        //{
+        //    SelectEmployeeByID(1);
+        //}
 
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            SelectRamdomEmployee();
-        }
+        //if (Input.GetKeyUp(KeyCode.E))
+        //{
+        //    SelectRamdomEmployee();
+        //}
     }
 
     public void SelectEmployeeByName(string name)
